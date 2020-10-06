@@ -303,6 +303,7 @@ class _ProviderSummaryVisitor extends InjectClassVisitor {
 
 ProviderSummary _createConstructorProviderSummary(
     ConstructorElement element, bool isSingleton) {
+  // TODO 'type' is marked as deprecated and removed in future analyzer releases
   var returnType = element.enclosingElement.type;
   return new ProviderSummary(
       getInjectedType(returnType), element.name, ProviderKind.constructor,
